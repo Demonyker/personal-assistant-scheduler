@@ -6,9 +6,9 @@ import (
 )
 
 type (
-	// TasksRepo -.
+	// TasksRepo - repository to work with user tasks.
 	TasksRepo interface {
-		Save(ctx context.Context, task entity.Task) error
-		GetMany(ctx context.Context, userId string) ([]entity.Task, error)
+		Save(ctx context.Context, tasks []entity.Task) error
+		GetMany(ctx context.Context, userID string) ([]entity.Task, error)
 	}
 )
